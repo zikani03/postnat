@@ -1,0 +1,18 @@
+[postgres]
+host = "localhost"
+port = 5432
+database = "database"
+username = "username"
+password = "password"
+sslmode = "disable"
+
+[nats]
+url = "nats://username:password@localhost:4222"
+max_reconnects = 10
+
+[topics]
+listen_for = ["users", "users_id"]
+# optional topic prefix
+prefix = "app."
+# This replaces the underscore when publishing to nats, e.g. emails_signup -> emails.signup
+replace_underscore_with_dot = true

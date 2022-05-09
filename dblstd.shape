@@ -1,0 +1,11 @@
+/cmd/
+.gitignore
+.golangci.yaml
+.goreleaser.yaml
+docker-compose.yaml
+Dockerfile
+go.mod
+go.sum
+lefthook.yaml
+LICENSE
+README.md

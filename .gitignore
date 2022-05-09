@@ -1,0 +1,10 @@
+coverage.out
+postnat
+tmp
+vendor
+venv
+/docs/
+/dist/
+/build/
+development.toml
+*.exe

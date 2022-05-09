@@ -1,0 +1,19 @@
+version: '3'
+networks:
+  postnat-network:
+
+services:
+  nats-server:
+    image: nats
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+      # - "6222:6222" we don't need clustering
+    networks:
+      - postnat-network
+  postnat-daemon:
+    build: .
+    volumes:
+      - "./development.toml:/data/postnat.toml"
+    networks:
+      - postnat-network
